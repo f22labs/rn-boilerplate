@@ -1,9 +1,10 @@
-import {createAppContainer} from 'react-navigation';
-import {createStackNavigator, SwitchNavigator} from 'react-navigation-stack';
+import {createAppContainer, createSwitchNavigator} from 'react-navigation';
+import {createStackNavigator} from 'react-navigation-stack';
 import FirstScreen from '../screens/FirstScreen';
 import SecondScreen from '../screens/SecondScreen';
+import SplashScreen from '../screens/SplashScreen';
 
-const rootStack = createStackNavigator(
+const HomeStack = createStackNavigator(
   {
     FirstScreen,
     SecondScreen,
@@ -16,6 +17,16 @@ const rootStack = createStackNavigator(
   },
 );
 
-const AppContainer = createAppContainer(rootStack);
+const RootStack = createSwitchNavigator(
+  {
+    SplashScreen,
+    HomeStack,
+  },
+  {
+    initialRouteName: 'SplashScreen',
+  },
+);
+
+const AppContainer = createAppContainer(RootStack);
 
 export default AppContainer;
