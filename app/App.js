@@ -2,6 +2,9 @@ import React from 'react';
 import {StyleSheet, View, StatusBar} from 'react-native';
 import AppContainer from './navigation/AppContainer';
 import NavigationService from './navigation/NavigationService';
+import {useScreens} from 'react-native-screens';
+
+useScreens();
 
 function App() {
   return (

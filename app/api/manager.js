@@ -1,7 +1,6 @@
 import axios from 'axios';
-import {Configs} from '../helpers/Configs';
-// import {UserAuth} from './StoreManager';
 import NavigationService from '../navigation/NavigationService';
+import {User} from '../store';
 import {BASE_API_URL} from 'react-native-dotenv';
 
 /**
@@ -30,9 +29,11 @@ const Api = async (
     console.log('Request Failed:', error);
     if (error.response.status === 401) {
       /**
+       * If 401
        * Clear the token from offline store
-       * and navigate to Initial Stack
+       * and navigate to Initial Stack using Navigation Service
        */
+      User.clearToken();
     }
 
     if (error.response) {
@@ -55,17 +56,17 @@ const Api = async (
   };
 
   // Append auth token
-  // if (shouldAppendToken) {
-  //   try {
-  //     const token = await UserAuth.getToken();
-  //     headers['Access-Token'] = token;
-  //   } catch (error) {
-  //     // Token is not found
-  //     console.log('Error Message:', error.message);
+  if (shouldAppendToken) {
+    try {
+      const token = await User.getToken();
+      headers['Access-Token'] = token;
+    } catch (error) {
+      // Token is not found
+      console.log('Error Message:', error.message);
 
-  //     return Promise.reject(error.message);
-  //   }
-  // }
+      return Promise.reject(error.message);
+    }
+  }
 
   // Set headers
   axiosClient.defaults.headers = headers;
