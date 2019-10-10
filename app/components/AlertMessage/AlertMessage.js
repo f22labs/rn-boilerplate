@@ -8,7 +8,6 @@ const AlertMessage = React.forwardRef((props, ref) => {
     <DropdownAlert
       ref={ref}
       zIndex={1000}
-      closeInterval={3000}
       imageStyle={{ width: 0, height: 0 }}
       errorColor={Colors.alertError}
       successColor={Colors.alertSuccess}
