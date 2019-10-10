@@ -11,7 +11,7 @@ const rootStack = createStackNavigator(
   {
     initialRouteName: 'FirstScreen',
     defaultNavigationOptions: {
-      // header: null,
+      header: null,
     },
   },
 );

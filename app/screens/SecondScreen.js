@@ -1,13 +1,16 @@
 import React from 'react';
-import {Text, SafeAreaView} from 'react-native';
-import {StyledHeader} from '../styled_components/StyledCommon';
+import {Text} from 'react-native';
+import {
+  StyledHeader,
+  ScreenWithHeader,
+} from '../styled_components/StyledCommon';
 
 function SecondScreen({navigation}) {
   return (
-    <SafeAreaView>
-      {/* <StyledHeader /> */}
+    <ScreenWithHeader>
+      <StyledHeader />
       <Text onPress={() => navigation.goBack()}>Second Screen</Text>
-    </SafeAreaView>
+    </ScreenWithHeader>
   );
 }
 
