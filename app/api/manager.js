@@ -1,7 +1,7 @@
 import axios from 'axios';
 import NavigationService from '../navigation/NavigationService';
-import {User} from '../store';
-import {BASE_API_URL} from 'react-native-dotenv';
+import { User } from '../store';
+import { BASE_API_URL } from 'react-native-dotenv';
 
 /**
  * Create an Axios Client with defaults
@@ -15,7 +15,7 @@ const axiosClient = axios.create({
  * Request Wrapper with default success/error actions
  */
 const Api = async (
-  config = {method: 'GET', data: {}, url: ''},
+  config = { method: 'GET', data: {}, url: '' },
   shouldAppendToken = true,
 ) => {
   // Success

@@ -1,7 +1,7 @@
-import React, {useEffect, useRef} from 'react';
-import {SafeAreaView, Text, StyleSheet} from 'react-native';
+import React, { useEffect, useRef } from 'react';
+import { SafeAreaView, Text, StyleSheet } from 'react-native';
 
-function SplashScreen({navigation}) {
+function SplashScreen({ navigation }) {
   const TIME_TO_NAVIGATE = 500;
   const navigationRef = useRef(navigation);
 

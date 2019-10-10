@@ -1,14 +1,14 @@
 import React from 'react';
-import {Text, SafeAreaView} from 'react-native';
+import { Text, SafeAreaView } from 'react-native';
 import Colors from '../theme/Colors';
 
-function FirstScreen({navigation}) {
+function FirstScreen({ navigation }) {
   return (
     <SafeAreaView
-      style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+      style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text
         onPress={() => navigation.navigate('SecondScreen')}
-        style={{color: Colors.red}}>
+        style={{ color: Colors.red }}>
         First Screen
       </Text>
     </SafeAreaView>

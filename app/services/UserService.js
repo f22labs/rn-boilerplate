@@ -12,7 +12,7 @@ const update = (id, data) => {
   if (!id) throw Error('Id is a required parameter');
   return API({
     method: 'PUT',
-    url: _.template(config.urls.users.get)({id}),
+    url: _.template(config.urls.users.get)({ id }),
     data,
   });
 };
