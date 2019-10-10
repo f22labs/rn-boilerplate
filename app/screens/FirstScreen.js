@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text, SafeAreaView} from 'react-native';
-import Colors from '../Colors';
+import Colors from '../theme/Colors';
 
 function FirstScreen({navigation}) {
   return (
