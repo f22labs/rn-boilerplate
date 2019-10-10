@@ -1,6 +1,6 @@
 // NavigationService.js
 
-import {NavigationActions, StackActions} from 'react-navigation';
+import { NavigationActions, StackActions } from 'react-navigation';
 
 let _navigator;
 

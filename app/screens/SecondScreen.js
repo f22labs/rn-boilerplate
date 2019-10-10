@@ -1,11 +1,12 @@
-import React from 'react';
-import {Text} from 'react-native';
+import React from "react";
+import { Text } from "react-native";
 import {
   StyledHeader,
-  ScreenWithHeader,
-} from '../styled_components/StyledCommon';
+  ScreenWithHeader
+} from "../styled_components/StyledCommon";
+import Colors from "../theme/Colors";
 
-function SecondScreen({navigation}) {
+function SecondScreen({ navigation }) {
   return (
     <ScreenWithHeader>
       <StyledHeader />
