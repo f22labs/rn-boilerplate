@@ -1,4 +1,4 @@
-import {Dimensions, Platform, StatusBar} from 'react-native';
+import { Dimensions, Platform, StatusBar } from 'react-native';
 
 const X_WIDTH = 375;
 const X_HEIGHT = 812;
@@ -6,7 +6,7 @@ const X_HEIGHT = 812;
 const XSMAX_WIDTH = 414;
 const XSMAX_HEIGHT = 896;
 
-const {height: W_HEIGHT, width: W_WIDTH} = Dimensions.get('window');
+const { height: W_HEIGHT, width: W_WIDTH } = Dimensions.get('window');
 
 let isIPhoneX = false;
 
