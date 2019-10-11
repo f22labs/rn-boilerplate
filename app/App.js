@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { StyleSheet, View, StatusBar,Text } from 'react-native';
+import { StyleSheet, View, StatusBar, Text } from 'react-native';
 import AppContainer from './navigation/AppContainer';
 import NavigationService from './navigation/NavigationService';
 import { useScreens } from 'react-native-screens';
@@ -7,9 +7,9 @@ import { ThemeProvider } from 'react-native-elements';
 import appElementsTheme from './theme/appElementsTheme';
 import DropDownProvider from './Providers/DropDownProvider';
 import AlertMessage from './components/AlertMessage/AlertMessage';
-
 import LoaderProvider from './Providers/LoaderProvider';
-import Loader from './components/Loader/Loader'
+import Loader from './components/Loader/Loader';
+
 useScreens();
 
 function App() {
