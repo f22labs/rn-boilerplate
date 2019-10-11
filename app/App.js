@@ -5,9 +5,9 @@ import NavigationService from './navigation/NavigationService';
 import { useScreens } from 'react-native-screens';
 import { ThemeProvider } from 'react-native-elements';
 import appElementsTheme from './theme/appElementsTheme';
-import DropDownProvider from './Providers/DropDownProvider';
+import DropDownProvider from './providers/DropDownProvider';
+import LoaderProvider from './providers/LoaderProvider';
 import AlertMessage from './components/AlertMessage/AlertMessage';
-import LoaderProvider from './Providers/LoaderProvider';
 import Loader from './components/Loader/Loader';
 
 useScreens();

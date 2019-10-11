@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { DropDownContext } from '../Providers/DropDownProvider';
+import { DropDownContext } from '../providers/DropDownProvider';
 
 export default function useDropDown() {
   const context = useContext(DropDownContext);
