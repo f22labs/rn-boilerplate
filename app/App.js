@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { StyleSheet, View, StatusBar } from 'react-native';
+import { StyleSheet, View, StatusBar,Text } from 'react-native';
 import AppContainer from './navigation/AppContainer';
 import NavigationService from './navigation/NavigationService';
 import { useScreens } from 'react-native-screens';
@@ -8,6 +8,8 @@ import appElementsTheme from './theme/appElementsTheme';
 import DropDownProvider from './Providers/DropDownProvider';
 import AlertMessage from './components/AlertMessage/AlertMessage';
 
+import LoaderProvider from './Providers/LoaderProvider';
+import Loader from './components/Loader/Loader'
 useScreens();
 
 function App() {
@@ -19,9 +21,12 @@ function App() {
       <View style={styles.navigationContainer}>
         <ThemeProvider theme={appElementsTheme}>
           <DropDownProvider dropdownRef={dropdownRef}>
-            <AppContainer
-              ref={ref => NavigationService.setTopLevelNavigator(ref)}
-            />
+            <LoaderProvider>
+              <AppContainer
+                ref={ref => NavigationService.setTopLevelNavigator(ref)}
+              />
+              <Loader></Loader>
+            </LoaderProvider>
           </DropDownProvider>
         </ThemeProvider>
       </View>
