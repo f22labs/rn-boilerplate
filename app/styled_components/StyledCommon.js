@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components/native';
 import { Header } from 'react-native-elements';
-import { Platform, View, Text, Animated, Easing } from 'react-native';
+import { Platform, Text, Animated } from 'react-native';
 import { getStatusBarHeight } from '../helpers/StatusBarHeight';
 import { useNetInfo } from '@react-native-community/netinfo';
 import Colors from '../theme/Colors';
@@ -36,7 +36,7 @@ export const StyledHeader = props => {
         duration: 300,
       }).start();
     }
-  }, [netInfo.isConnected]);
+  }, [netInfo.isConnected, heightAnim]);
 
   return (
     <>
