@@ -6,6 +6,7 @@ import {
   ScreenWithHeader,
 } from '../styled_components/StyledCommon';
 import HeaderCenter from '../components/Header/HeaderCenter';
+import { Image } from 'react-native-elements';
 
 function FirstScreen({ navigation }) {
   return (
@@ -16,6 +17,12 @@ function FirstScreen({ navigation }) {
         style={{ color: Colors.red }}>
         First Screen
       </Text>
+      <Image
+        style={{ width: 200, height: 200 }}
+        source={{
+          uri: 'https://unsplash.it/200/200?image=1',
+        }}
+      />
     </ScreenWithHeader>
   );
 }
