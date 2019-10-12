@@ -17,7 +17,6 @@ function SplashScreen({ navigation }) {
 
   return (
     <SafeAreaView style={styles.splashContainer}>
-      {/* Splash Screen styles */}
       <Text>SplashScreen</Text>
     </SafeAreaView>
   );
