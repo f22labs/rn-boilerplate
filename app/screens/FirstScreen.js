@@ -1,15 +1,17 @@
 import React from 'react';
-import { Text, SafeAreaView, View } from 'react-native';
+import { Text, SafeAreaView, View, TouchableOpacity } from 'react-native';
 import Colors from '../theme/Colors';
-import { ScreenWithHeader } from '../styled_components/StyledCommon';
+// import { ScreenWithHeader } from '../styled_components/StyledCommon';
 import Header from '../components/Header/Header';
 import HeaderCenter from '../components/Header/HeaderCenter';
 import { Image } from 'react-native-elements';
+import HeaderLeft from '../components/Header/HeaderLeft';
+import HeaderRight from '../components/Header/HeaderRight';
+import ScreenWithHeader from '../components/Header/ScreenWithHeader';
 
 function FirstScreen({ navigation }) {
   return (
-    <View>
-      <Header />
+    <ScreenWithHeader centerComponent={<HeaderCenter title="Main" />}>
       <Text
         onPress={() => navigation.navigate('SecondScreen')}
         style={{ color: Colors.red }}>
@@ -21,7 +23,7 @@ function FirstScreen({ navigation }) {
           uri: 'https://unsplash.it/200/200?image=1',
         }}
       />
-    </View>
+    </ScreenWithHeader>
   );
 }
 

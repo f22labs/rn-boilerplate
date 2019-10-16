@@ -1,8 +1,16 @@
 import React from 'react';
-import { Button } from 'react-native-elements';
-
+import { Text, View } from 'react-native';
+import Touchable from '../../helpers/Touchable';
 function HeaderLeft({ onPress = () => {}, title = '' }) {
-  return <Button onPress={() => onPress()} title={title} />;
+  return (
+    <View style={{ paddingLeft: 10, flex: 1, alignItems: 'flex-start' }}>
+      <Touchable
+        style={{ width: 45, alignItems: 'center' }}
+        onPress={() => onPress()}>
+        <Text>{title}</Text>
+      </Touchable>
+    </View>
+  );
 }
 
 export default HeaderLeft;

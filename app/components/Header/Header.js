@@ -1,10 +1,14 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Platform } from 'react-native';
 import { getStatusBarHeight } from '../../helpers/StatusBarHeight';
 
 const height = getStatusBarHeight();
 
-function Header({ leftComponent, centerComponent, rightComponent }) {
+function Header({
+  leftComponent = <View style={{ paddingLeft: 15, flex: 1 }} />,
+  centerComponent = <View style={{ flex: 1 }} />,
+  rightComponent = <View style={{ paddingRight: 15, flex: 1 }} />,
+}) {
   console.log(height);
   return (
     <View style={styles.headerContainer}>
@@ -17,10 +21,12 @@ function Header({ leftComponent, centerComponent, rightComponent }) {
 
 const styles = StyleSheet.create({
   headerContainer: {
-    backgroundColor: 'red',
+    backgroundColor: 'blue',
     height: 40 + height,
     justifyContent: 'space-between',
-    paddingTop: height,
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingTop: Platform.OS === 'ios' ? height : 0,
   },
 });
 

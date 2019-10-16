@@ -1,8 +1,12 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
 
 function HeaderCenter({ title = '' }) {
-  return <Text> {title}</Text>;
+  return (
+    <View>
+      <Text> {title}</Text>
+    </View>
+  );
 }
 
 export default HeaderCenter;
