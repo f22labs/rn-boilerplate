@@ -25,7 +25,7 @@ function App() {
               <AppContainer
                 ref={ref => NavigationService.setTopLevelNavigator(ref)}
               />
-              <Loader></Loader>
+              <Loader />
             </LoaderProvider>
           </DropDownProvider>
         </ThemeProvider>

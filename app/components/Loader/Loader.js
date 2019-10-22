@@ -1,11 +1,11 @@
 import React from 'react';
-import { useWindowDimensions, View } from 'react-native';
+import { View, Dimensions } from 'react-native';
 import useLoader from '../../hooks/useLoader';
 import Colors from '../../theme/Colors';
+const { width, height } = Dimensions.get('window');
 
 export default function Loader() {
-  const { width, height } = useWindowDimensions();
-  const { showLoader, component, setComponent } = useLoader();
+  const { showLoader, component } = useLoader();
 
   if (showLoader)
     return (
