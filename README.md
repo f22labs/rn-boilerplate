@@ -1,8 +1,8 @@
-## :plate_with_cutlery: F22 React Native Boilerplate :plate_with_cutlery:
+# :plate_with_cutlery: F22 React Native Boilerplate :plate_with_cutlery:
 
 This is a simple boilerplate that we for our react native projects.
 
-# Technologies Used
+## Technologies Used
 
 - react-navigation
 - axios
@@ -72,3 +72,21 @@ Make sure you have `yarn` installed on your machine.
     ├── Fonts.js
     └── appElementsTheme.js
 ```
+
+# Misc
+
+## Adding Fonts
+ 
+1. Place fonts in `app/assets/fonts`.
+2. `react-native link` to link the fonts.
+3. Use your fonts in `app/theme/Fonts` and expose it in your app.
+
+
+## .env config
+
+ 1. Create a `.env` in root of the project and copy contents of `.env.example` into this.
+ 2. Replace the variable with your preferred variables.
+ 
+ 
+ 
+ 
