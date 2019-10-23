@@ -1,6 +1,6 @@
 # :plate_with_cutlery: F22 React Native Boilerplate :plate_with_cutlery:
 
-This is a simple boilerplate that we for our react native projects.
+This is a simple boilerplate that we use for our react native projects.
 
 ## :arrow_down: How to use it
 
@@ -13,14 +13,14 @@ Make sure you have `yarn` installed on your machine.
 
 ## Technologies Used
 
-- react-navigation
-- axios
-- styled-components
-- formik and yup
-- react-native-simple-store
-- react-native-elements
-- react-native-dotenv
-- react-native-dropdownalert
+- react-navigation - https://reactnavigation.org/
+- axios - https://github.com/axios/axios
+- styled-components - https://www.styled-components.com/
+- formik and yup - https://jaredpalmer.com/formik/docs/overview, https://github.com/jquense/yup
+- react-native-simple-store - https://jasonmerino.me/react-native-simple-store
+- react-native-elements - https://react-native-elements.github.io/react-native-elements/
+- react-native-dotenv - https://github.com/zetachang/react-native-dotenv
+- react-native-dropdownalert - https://github.com/testshallpass/react-native-dropdownalert
 
 
 ## Project Structure
@@ -132,3 +132,6 @@ All the custom hooks must be inside the `app/hooks` folder.
  1. The `{base_url}` and the endpoints must be configured in the `config.js` file.
  2. Create your services in the `app/services/{YOUR_SERVICE_NAME}.js` and follow the pattern used in the `app/services/UserService.js` and link the corresponding service in `app/services/index.js` file.
  
+## Note
+
+If you find any issues with the docs. Feel free to raise an issue. 
