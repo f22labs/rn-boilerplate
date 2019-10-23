@@ -16,6 +16,7 @@ Use our starter cli here (https://github.com/f22labs/f22-app-starter)
 - react-native-elements - https://react-native-elements.github.io/react-native-elements/
 - react-native-dotenv - https://github.com/zetachang/react-native-dotenv
 - react-native-dropdownalert - https://github.com/testshallpass/react-native-dropdownalert
+- react-native-splash-screen - https://github.com/crazycodeboy/react-native-splash-screen
 
 
 ## Project Structure
@@ -126,6 +127,24 @@ All the custom hooks must be inside the `app/hooks` folder.
 
  1. The `{base_url}` and the endpoints must be configured in the `config.js` file.
  2. Create your services in the `app/services/{YOUR_SERVICE_NAME}.js` and follow the pattern used in the `app/services/UserService.js` and link the corresponding service in `app/services/index.js` file.
+ 
+ 
+ ## Modify Splash Screen
+ 
+ ### iOS
+ 
+ 1. Go to `app/assets/images` and replace launch_screen.png with your preferred image.
+  
+   **Note**: Keep the filename same.
+  
+ 2. To customise it completely, edit `LaunchScreen.xib` in Xcode.
+ 
+ ### Android
+ 
+ 1. Go to `android/app/src/main/res/` and replace the launch_screen.png in the corresponding drawable folders.
+ 2. To customise it completely, edit `android/app/src/main/res/layout/launch_screen.xml` in Android Studio or your preferred       editor.
+
+ 
  
 ## Note
 
