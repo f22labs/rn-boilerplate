@@ -35,6 +35,8 @@ target 'boilerplate' do
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
 
+  pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
+
   target 'boilerplateTests' do
     inherit! :search_paths
     # Pods for testing

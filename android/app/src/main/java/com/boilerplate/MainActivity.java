@@ -1,5 +1,7 @@
 package com.boilerplate;
-
+import org.devio.rn.splashscreen.SplashScreen;
+import android.os.Bundle;
+import org.devio.rn.splashscreen.SplashScreenReactPackage;
 import com.facebook.react.ReactActivity;
 
 public class MainActivity extends ReactActivity {
@@ -12,4 +14,9 @@ public class MainActivity extends ReactActivity {
   protected String getMainComponentName() {
     return "boilerplate";
   }
+  @Override
+    protected void onCreate(Bundle savedInstanceState){
+        SplashScreen.show(this);
+        super.onCreate(savedInstanceState);
+    }
 }

@@ -1,5 +1,5 @@
 package com.boilerplate;
-
+import org.devio.rn.splashscreen.SplashScreen;
 import android.app.Application;
 import android.content.Context;
 import com.facebook.react.PackageList;
