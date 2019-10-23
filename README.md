@@ -127,6 +127,8 @@ All the custom hooks must be inside the `app/hooks` folder.
 | useDropdown | Used for displaying the Alert Messages | 
 | useLoader  | Used for displaying the Activity Indicator  |
 
- 
- 
+## API Manager & Services Usage
+
+ 1. The `{base_url}` and the endpoints must be configured in the `config.js` file.
+ 2. Create your services in the `app/services/{YOUR_SERVICE_NAME}.js` and follow the pattern used in the `app/services/UserService.js` and link the corresponding service in `app/services/index.js` file.
  
