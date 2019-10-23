@@ -111,6 +111,21 @@ Make sure you have `yarn` installed on your machine.
 | centerComponent | Component | Used for rendering the center component of the header  |
 | rightComponent | Component | Used for rendering the right component of the header  |
 
+## NetInfo Badge Usage
+
+The NetInfo Badge is extracted into a custom component present in `app/components/NetInfo/NetInfo.js` can be imported into the Header or any custom component to display the badge.
+
+## Custom Hooks Usage
+
+All the custom hooks must be inside the `app/hooks` folder.
+
+` Note - If you are using a context provider, expose them as custom hooks. check existing hooks for reference ` 
+
+#### Included Hooks
+| Hooks |  Description |
+| ------------- |------------- |
+| useDropdown | Used for displaying the Alert Messages | 
+| useLoader  | Used for displaying the Activity Indicator  |
 
  
  
