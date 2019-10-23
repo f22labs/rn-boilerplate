@@ -1,7 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
 import Header from './Header';
-import NetInfo from '../NetInfo/NetInfo';
 
 function ScreenWithHeader({
   leftComponent,
@@ -16,7 +15,6 @@ function ScreenWithHeader({
         centerComponent={centerComponent}
         rightComponent={rightComponent}
       />
-      <NetInfo />
       {children}
     </View>
   );
