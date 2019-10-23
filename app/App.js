@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { StyleSheet, View, StatusBar, Text } from 'react-native';
+import { StyleSheet, View, StatusBar } from 'react-native';
 import AppContainer from './navigation/AppContainer';
 import NavigationService from './navigation/NavigationService';
 import { useScreens } from 'react-native-screens';

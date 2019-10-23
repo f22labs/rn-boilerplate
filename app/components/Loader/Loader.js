@@ -7,7 +7,7 @@ const { width, height } = Dimensions.get('window');
 export default function Loader() {
   const { showLoader, component } = useLoader();
 
-  if (showLoader)
+  if (showLoader) {
     return (
       <View
         style={{
@@ -22,5 +22,7 @@ export default function Loader() {
         {component}
       </View>
     );
-  else return null;
+  } else {
+    return null;
+  }
 }
