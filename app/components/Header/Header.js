@@ -9,7 +9,6 @@ function Header({
   centerComponent = <View style={{ flex: 1 }} />,
   rightComponent = <View style={{ paddingRight: 15, flex: 1 }} />,
 }) {
-  console.log(height);
   return (
     <View style={styles.headerContainer}>
       {leftComponent}
