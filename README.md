@@ -1,6 +1,6 @@
 # :plate_with_cutlery: F22 React Native Boilerplate :plate_with_cutlery:
 
-This is a simple boilerplate that we for our react native projects.
+This is a simple boilerplate that we use for our react native projects.
 
 ## :arrow_down: How to use it
 
@@ -13,14 +13,14 @@ Make sure you have `yarn` installed on your machine.
 
 ## Technologies Used
 
-- react-navigation
-- axios
-- styled-components
-- formik and yup
-- react-native-simple-store
-- react-native-elements
-- react-native-dotenv
-- react-native-dropdownalert
+- react-navigation - https://reactnavigation.org/
+- axios - https://github.com/axios/axios
+- styled-components - https://www.styled-components.com/
+- formik and yup - https://jaredpalmer.com/formik/docs/overview, https://github.com/jquense/yup
+- react-native-simple-store - https://jasonmerino.me/react-native-simple-store
+- react-native-elements - https://react-native-elements.github.io/react-native-elements/
+- react-native-dotenv - https://github.com/zetachang/react-native-dotenv
+- react-native-dropdownalert - https://github.com/testshallpass/react-native-dropdownalert
 
 
 ## Project Structure
@@ -88,6 +88,50 @@ Make sure you have `yarn` installed on your machine.
  1. Create a `.env` in root of the project and copy contents of `.env.example` into this.
  2. Replace the variable with your preferred variables.
  
+## Header Usage
+
+ 1. Import the `ScreenWithHeader` component in the the current screen component.
+ 2. Wrap the entire screen around the `<ScreenWithHeader>` component like below.
+ ```
+ function FirstScreen() {
+  return (
+    <ScreenWithHeader>
+      <Text>
+        First Screen
+      </Text>
+     // ...   All the other components go here.
+    </ScreenWithHeader>
+  );
+}
+```
+#### Header Props
+| Props | Type | Description |
+| ------------- | ------------- |------------- |
+| leftComponent | Component | Used for rendering the left component of the header  | 
+| centerComponent | Component | Used for rendering the center component of the header  |
+| rightComponent | Component | Used for rendering the right component of the header  |
+
+## NetInfo Badge Usage
+
+The NetInfo Badge is extracted into a custom component present in `app/components/NetInfo/NetInfo.js` can be imported into the Header or any custom component to display the badge.
+
+## Custom Hooks Usage
+
+All the custom hooks must be inside the `app/hooks` folder.
+
+` Note - If you are using a context provider, expose them as custom hooks. check existing hooks for reference ` 
+
+#### Included Hooks
+| Hooks |  Description |
+| ------------- |------------- |
+| useDropdown | Used for displaying the Alert Messages | 
+| useLoader  | Used for displaying the Activity Indicator  |
+
+## API Manager & Services Usage
+
+ 1. The `{base_url}` and the endpoints must be configured in the `config.js` file.
+ 2. Create your services in the `app/services/{YOUR_SERVICE_NAME}.js` and follow the pattern used in the `app/services/UserService.js` and link the corresponding service in `app/services/index.js` file.
  
- 
- 
+## Note
+
+If you find any issues with the docs. Feel free to raise an issue. 
