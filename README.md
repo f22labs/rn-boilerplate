@@ -88,6 +88,30 @@ Make sure you have `yarn` installed on your machine.
  1. Create a `.env` in root of the project and copy contents of `.env.example` into this.
  2. Replace the variable with your preferred variables.
  
+## Header Usage
+
+ 1. Import the `ScreenWithHeader` component in the the current screen component.
+ 2. Wrap the entire screen around the `<ScreenWithHeader>` component like below.
+ ```
+ function FirstScreen() {
+  return (
+    <ScreenWithHeader>
+      <Text>
+        First Screen
+      </Text>
+     // ...   All the other components go here.
+    </ScreenWithHeader>
+  );
+}
+```
+#### Header Props
+| Props | Type | Description |
+| ------------- | ------------- |------------- |
+| leftComponent | Component | Used for rendering the left component of the header  | 
+| centerComponent | Component | Used for rendering the center component of the header  |
+| rightComponent | Component | Used for rendering the right component of the header  |
+
+
  
  
  
