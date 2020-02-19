@@ -1,20 +1,19 @@
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import SplashScreen from 'react-native-splash-screen';
 
-function SplashContainer({ navigation }) {
+function SplashContainer({ setLoading }) {
   const TIME_TO_NAVIGATE = 500;
-  const navigationRef = useRef(navigation);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       SplashScreen.hide();
-      navigationRef.current.navigate('HomeStack');
+      setLoading(false);
     }, TIME_TO_NAVIGATE);
 
     return () => {
       clearTimeout(timeout);
     };
-  }, []);
+  }, [setLoading]);
 
   return null;
 }
