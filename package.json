@@ -25,7 +25,7 @@
     "formik": "^1.5.8",
     "lodash": "^4.17.15",
     "react": "16.9.0",
-    "react-native": "0.61.2",
+    "react-native": "0.62.3",
     "react-native-dotenv": "^0.2.0",
     "react-native-dropdownalert": "^4.2.0",
     "react-native-elements": "^1.2.6",
